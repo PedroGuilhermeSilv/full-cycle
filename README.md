@@ -19,4 +19,4 @@ EXPOSE: 8000
 - Os volumes fazem o docker compartilhar uma pasta local junto a imagem docker para que os arquivos não sejam perdidos.
 - O Network permite que as imagens possas se comunicar dentro do docker.
 
-![](https://myoctocat.com/assets/images/base-octocat.svg)
+![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/Aulas/Docker/img/docker-funciona.png)
