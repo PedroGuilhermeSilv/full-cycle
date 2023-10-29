@@ -23,10 +23,10 @@ EXPOSE: 8000
 
 5 - Comandos:
 
-````docker ps```` 
+$ docker ps
 Mostra os containers que estão rodando.
 
-````docker ps -a````
+$ docker ps -a
 Mostra os containers que estão rodando e os que já executaram mas foram abortados.
 
 
