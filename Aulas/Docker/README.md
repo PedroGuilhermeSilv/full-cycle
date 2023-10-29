@@ -22,13 +22,13 @@ EXPOSE: 8000
 ![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/Aulas/Docker/img/docker-funciona.png)
 
 5 - Comandos:
-
+```bash
+# Mostra os containers que estão rodando.
 $ docker ps
-Mostra os containers que estão rodando.
 
+# Mostra os containers que estão rodando e os que já executaram mas foram abortados.
 $ docker ps -a
-Mostra os containers que estão rodando e os que já executaram mas foram abortados.
-
+```
 
 
 
