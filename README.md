@@ -3,60 +3,60 @@ Full Cycle 3.0 - School of Net, [11/08/2023 11:43]
 
 Conteúdos a serem abordados no curso
 
-- 02. Docker [ x ]
+- 02 Docker [ x ]
 
-- 03. Padrões e técnicas avançadas com Git e Github [ ]
+- 03 Padrões e técnicas avançadas com Git e Github [ ]
 
-- 04. Integração contínua [ ]
+- 04 Integração contínua [ ]
 
-- 05. Kubernetes [ ]
+- 05 Kubernetes [ ]
 
-- 06. Service Mesh com Istio [ ]
+- 06 Service Mesh com Istio [ ]
 
-- 07. API Gateway com Kong e Kubernetes [ ]
+- 07 API Gateway com Kong e Kubernetes [ ]
 
-- 08. Observabilidade [ ]
+- 08 Observabilidade [ ]
 
-- 09. Introdução a OpenTelemetry [ ]
+- 09 Introdução a OpenTelemetry [ ]
 
-- 10. Terraform [ ]
+- 10 Terraform [ ]
 
-- 11. Ansible [ ]
+- 11 Ansible [ ]
 
-- 12. GitOps [ ]
+- 12 GitOps [ ]
 
-- 13. Deploy nas Cloud Providers [ ]
+- 13 Deploy nas Cloud Providers [ ]
 
-- 14. Fundamentos da arquitetura de software [ ]
+- 14 Fundamentos da arquitetura de software [ ]
 
-- 15. Comunicação entre sistemas [ ]
+- 15 Comunicação entre sistemas [ ]
 
-- 16. SOLID Express [ ]
+- 16 SOLID Express [ ]
 
-- 17. Domain Driven Design [ ]
+- 17 Domain Driven Design [ ]
 
-- 18. DDD Modelagem Tática e Patterns [ ]
+- 18 DDD Modelagem Tática e Patterns [ ]
 
-- 19. Event Storming na Prática [ ]
+- 19 Event Storming na Prática [ ]
 
-- 20. Arquitetura hexagonal [ ]
+- 20 Arquitetura hexagonal [ ]
 
-- 21. Clean Architecture [ ]
+- 21 Clean Architecture [ ]
 
-- 22. Sistemas monolíticos [ ]
+- 22 Sistemas monolíticos [ ]
 
-- 23. Arquitetura baseada em microsserviços [ ]
+- 23 Arquitetura baseada em microsserviços [ ]
 
-- 24. EDA - Event Driven Architecture [ ]
+- 24 EDA - Event Driven Architecture [ ]
 
-- 25. API Gateway [ ]
+- 25 API Gateway [ ]
 
-- 26. RabbitMQ [ ]
+- 26 RabbitMQ [ ]
 
-- 27. Apache Kafka [ ]
+- 27 Apache Kafka [ ]
 
-- 28. Autenticação e Keycloak [ ]
+- 28 Autenticação e Keycloak [ ]
 
-- 29. Arquitetura do projeto prático - Codeflix [ ]
+- 29 Arquitetura do projeto prático - Codeflix [ ]
 
 Dentro de cada pasta deixei uma documentação detalhada de cada assunto que estudei.
