@@ -30,7 +30,25 @@ Mostra os containers que estão rodando e os que já executaram mas foram aborta
 ```bash
 $ docker ps -a
 ```
+"-i" significa interativo, fazendo com que seu terminal fique ligado diretamente no container.
+"-t" signfica TTY, possibilita digitar comandos no terminal.
+```bash
+$ docker run -it ubuntu bash
+```
+"--rm" após encerrar o container ele apagará seu histórico.
+```bash
+$ docker run -it --rm ubuntu bash
+```
 
+"-p" passa a porta local (8080) que apontará a porta do conatiner (80)
+```bash
+$ docker run -p 8080:80 nginx
+```
+
+"-d" desacpla o terminal do container
+```bash
+$ docker run -d -p 8080:80 nginx
+```
 
  Aula
- [] #F0013
+ [] #F0015
