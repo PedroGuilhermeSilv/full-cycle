@@ -5,6 +5,7 @@
 - Containers são na verdade processos isolados que simulam um sistema operacional.
 - CGroups permitu separa recursos(memória, trehads) para determinado processo.
 - OFS (Overlay File System), para cada nova imagem criada não se repete dependências já instaladas mas sim as que foram alteradas.
+- Containers são imutáveis, não faça alterações nos arquivos dos containers pois após você matar o processos as mudanças seram perdidas.
 
 2 - Imagens:
 - São camadas de dependências e essas mesmas dependências podem ser usadas em outras imagens.
@@ -45,10 +46,30 @@ $ docker run -it --rm ubuntu bash
 $ docker run -p 8080:80 nginx
 ```
 
-"-d" desacpla o terminal do container
+"-d" desacopla o terminal do container e "--name" passa o nome do container
 ```bash
-$ docker run -d -p 8080:80 nginx
+$ docker run --name ngnix -d -p 8080:80 nginx
 ```
 
+"start" inicia o container 
+```bash
+$ docker start nome_container
+```
+
+"rm" remove p container e "-f" força a remoção
+```bash
+$ docker rm nome_container -f
+```
+o "exec" executa comando dentro do container. No exemmplo abaixo ele irá retornar os arquivos que estao no container.
+```bash
+$ docker exec nome_container ls
+```
+Já no exemplo abaixo ficamos dentro do container com o bash ativo.
+```bash
+$ docker exec -it nome_container bash
+```
+
+
  Aula
- [] #F0015
+ [] #F0017
+ 
