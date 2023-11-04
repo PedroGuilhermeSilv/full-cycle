@@ -9,6 +9,7 @@
 
 2 - Imagens:
 - São camadas de dependências e essas mesmas dependências podem ser usadas em outras imagens.
+- https://hub.docker.com/ 
 
 3 - Dockerfile:
 - Arquivo declarativo para construir imagens
@@ -56,7 +57,7 @@ $ docker run --name ngnix -d -p 8080:80 nginx
 $ docker start nome_container
 ```
 
-"rm" remove p container e "-f" força a remoção
+"rm" remove o container e "-f" força a remoção
 ```bash
 $ docker rm nome_container -f
 ```
@@ -69,7 +70,16 @@ Já no exemplo abaixo ficamos dentro do container com o bash ativo.
 $ docker exec -it nome_container bash
 ```
 
+Lista as imagens baixadas no seu computador
+```bash
+$ docker images
+```
+
+"rm" remove a imagem 
+```bash
+$ docker rmi nome_imagem
+```
 
  Aula
- [] #F0017
+ [] #F0022
  
