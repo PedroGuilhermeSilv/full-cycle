@@ -32,7 +32,7 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
     - docker push nome_imagem
 
 
-![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/Aulas/Docker/img/docker-funciona.png)
+![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/docker/img/docker-funciona.png)
 
 5 - Comandos:
 Mostra os containers que estão rodando.
