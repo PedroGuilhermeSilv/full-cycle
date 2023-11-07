@@ -1,6 +1,8 @@
 # Full Cycle
 
 # Docker
+![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/docker/img/docker-funciona.png)
+
 1 - Containers:
 - Containers são na verdade processos isolados que simulam um sistema operacional.
 - CGroups permitu separa recursos(memória, trehads) para determinado processo.
@@ -21,6 +23,7 @@ WORKDIR: Cria uma pasta dentro do container
 CMD: Comandos sh (Obs: Os comandos podem ser substituidos no comando de executação)
 ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será executado primeiro que o CMD)
 
+
 4 - Volumes, Network
 - Os volumes fazem o docker compartilhar uma pasta local junto a imagem docker para que os arquivos não sejam perdidos.
 - O Network permite que as imagens possas se comunicar dentro do docker.
@@ -30,9 +33,6 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
 - É possível criar uma imagem e subi-lá no DockerHub para se tornar uma imagem pública.
     - docker login
     - docker push nome_imagem
-
-
-![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/docker/img/docker-funciona.png)
 
 5 - Comandos:
 Mostra os containers que estão rodando.
