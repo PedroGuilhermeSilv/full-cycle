@@ -13,13 +13,24 @@
 
 3 - Dockerfile:
 - Arquivo declarativo para construir imagens
-FROM: ImgaemName
-RUN: Comandos
-EXPOSE: 8000
+FROM: Nome da Imagem
+RUN: Comando executados no terminal do container
+EXPOSE: Porta a ser exposta
+COPY: Copia uma pasta local para dentro do container
+WORKDIR: Cria uma pasta dentro do container
+CMD: Comandos sh (Obs: Os comandos podem ser substituidos no comando de executação)
+ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será executado primeiro que o CMD)
 
 4 - Volumes, Network
 - Os volumes fazem o docker compartilhar uma pasta local junto a imagem docker para que os arquivos não sejam perdidos.
 - O Network permite que as imagens possas se comunicar dentro do docker.
+
+
+5 - DockerHub
+- É possível criar uma imagem e subi-lá no DockerHub para se tornar uma imagem pública.
+    - docker login
+    - docker push nome_imagem
+
 
 ![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/Aulas/Docker/img/docker-funciona.png)
 
@@ -81,5 +92,5 @@ $ docker rmi nome_imagem
 ```
 
  Aula
- [] #F0022
+ [] #F0025
  
