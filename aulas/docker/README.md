@@ -33,6 +33,7 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
 - host: permite o container acessar a máquina local pelo host.
 - overlay: faz a comunicação de vários dokcers.
 - none: serve para rodar o container de forma isolada.
+- host.docker.internal:8000 consegue acessar a porta local peelo container.
 
 6 - DockerHub
 - É possível criar uma imagem e subi-lá no DockerHub para se tornar uma imagem pública.
@@ -98,5 +99,5 @@ $ docker rmi nome_imagem
 ```
 
  Aula
- [] #F0027
+ [] #F0030
  
