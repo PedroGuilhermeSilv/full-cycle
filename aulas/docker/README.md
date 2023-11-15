@@ -40,7 +40,45 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
     - docker login
     - docker push nome_imagem
 
-7 - Comandos:
+6 - Docker-compose
+- É um conjunto de instruções que são executadas automaticamente para criação dos containers. Você pode passar:
+    image:
+        Especifica a imagem Docker para o serviço.
+
+    build:
+        Define as instruções para construir a imagem do Docker.
+
+    command:
+        Sobrescreve o comando padrão especificado pela imagem.
+
+    ports:
+        Mapeia as portas do host para as portas do container.
+
+    volumes:
+        Monta volumes do host no container para persistir dados.
+
+    environment:
+        Define variáveis de ambiente no container.
+
+    env_file:
+        Especifica um arquivo que contém variáveis de ambiente.
+
+    depends_on:
+        Define serviços dependentes.
+
+    networks:
+        Configura redes personalizadas para os serviços.
+
+    restart:
+        Controla o comportamento de reinicialização do serviço.
+
+    ports:
+        Mapeia as portas do host para as portas do container.
+
+    entrypoint:
+        Sobrescreve o ponto de entrada padrão.
+
+8 - Comandos:
 Mostra os containers que estão rodando.
 
 ```bash
@@ -98,6 +136,17 @@ $ docker images
 $ docker rmi nome_imagem
 ```
 
+"$(pwd)" pega o caminho da pasta atual 
+```bash
+$ docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash
+```
+
+Remove todos os containers 
+```bash
+$ docker rm $(docker ps -a -q) -f
+```
+
+
  Aula
- [] #F0030
+ [] #F0040
  

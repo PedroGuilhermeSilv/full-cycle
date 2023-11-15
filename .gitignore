@@ -1,0 +1,3 @@
+# Ignora arquivos dos containers
+aulas/docker/example/node/node_modules
+aulas/docker/example/mysql
