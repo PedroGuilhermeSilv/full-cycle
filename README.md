@@ -5,7 +5,7 @@ Conteúdos a serem abordados no curso
 
 - 02 Docker [ x ]
 
-- 03 Padrões e técnicas avançadas com Git e Github [ ]
+- 03 Padrões e técnicas avançadas com Git e Github [ ... ]
 
 - 04 Integração contínua [ ]
 

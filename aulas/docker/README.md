@@ -78,7 +78,7 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
     entrypoint:
         Sobrescreve o ponto de entrada padrão.
 
-8 - Comandos:
+8 - Comandos:.
 Mostra os containers que estão rodando.
 
 ```bash
