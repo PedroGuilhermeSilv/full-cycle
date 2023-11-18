@@ -1,6 +1,6 @@
 # Padrões e técnicas avançadas com Git e Github
 ## Padrões de branch
-![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/docker/img/docker-funciona.png)
+![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/git-github/img/gitflow.png)
 
 1. Branches Principais:
     - master: Representa a linha principal de desenvolvimento e contém apenas código estável e testado.
