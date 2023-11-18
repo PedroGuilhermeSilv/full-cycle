@@ -2,10 +2,9 @@
 ## Padrões de branch
 ![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/docker/img/docker-funciona.png)
 
-- Branches Principais:
-
-    master: Representa a linha principal de desenvolvimento e contém apenas código estável e testado.
-    develop: É o ramo de integração, onde as contribuições individuais são mescladas antes de serem lançadas.
+1. Branches Principais:
+    - master: Representa a linha principal de desenvolvimento e contém apenas código estável e testado.
+    - develop: É o ramo de integração, onde as contribuições individuais são mescladas antes de serem lançadas.
 
 - Branches de Feature (Funcionalidade):
 
