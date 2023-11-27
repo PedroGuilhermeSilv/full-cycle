@@ -23,3 +23,37 @@
 
 ## Repositório Git-Flow
 Foi criado um repositório para implementar a metodoogia git-flow [Gii-flow](https://github.com/PedroGuilhermeSilv/git-flow).
+
+
+## Trabalhando com assinatura de commits
+1. Gerando chave gpg 
+```
+gpg --full-generate-key
+```
+2. Ecolha RSA, tamannho de 4096 bits, validade (1y=1 ano, 1m= 1 mês), nome que será o mesmo usando no "git config --global user.name" e seu e-mail.
+
+3. Depois da chave criada execute este comando para copiar sua chave:
+```
+gpg --list-secret-key --keyid-form LONG
+```
+copie o id da chave (Ex:rsa4096/{id_chave})
+
+```
+gpg --armor --export {id_chave}
+```
+
+4. Copie a chave -> vá para seu github -> configurações-> SSH and GPG Keys -> New GPG Key -> cole sua chave.
+
+5. Configure o git local para utilizar a chave gpg nos commits:
+```
+git config --global user.signingkey {id_chave}
+```
+6. Force a utilizar a chave gpg nos commits do repositório atual.
+```
+git config commit.gpgsign true
+```
+para usar a assiantura nas tags:
+```
+git config tag.gpgsign true
+```
+caso queira usar assinatura em todos os repositórios use --global.
