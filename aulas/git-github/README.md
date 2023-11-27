@@ -57,3 +57,8 @@ para usar a assiantura nas tags:
 git config tag.gpgsign true
 ```
 caso queira usar assinatura em todos os repositórios use --global.
+
+## Configurações de segurança
+1. Vá no settings do seu repositório e mude a Default Branch para "develop".
+
+2. Adicione regras de commits.
