@@ -5,14 +5,19 @@
 1. Branches Principais:
     - main: Representa a linha principal de desenvolvimento e contém apenas código estável e testado.
     - develop: É o ramo de integração, onde as contribuições individuais são mescladas antes de serem lançadas.
-    > git checkout develop
-
+    ```
+    git checkout develop
+    ```
 2. Branches de Feature (Funcionalidade):
     - feature/{nome-da-feature}: Criados a partir do ramo develop para desenvolver novas funcionalidades. Após a conclusão, são mesclados de volta para develop.
-    > git checkout -b feature/{nome-da-feature}
-    > git checkout develop
-    > git merge feature/{nome-da-feature}
-    > git branch -d feature/{nome-da-feature}
+    ```
+    git checkout -b feature/{nome-da-feature}
+    git checkout develop
+    git merge feature/{nome-da-feature}
+    git branch -d feature/{nome-da-feature}
+    git push origin --delete nomeDoBranchRemoto # Deleta branch remota
+    git fetch -p # Sincroniza suas branch remota com local
+    ```
 
 
 3. Branches de Release (Versão):
