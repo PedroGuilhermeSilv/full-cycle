@@ -64,6 +64,3 @@ caso queira usar assinatura em todos os repositórios use --global.
 2. Adicione regras de commits.
 
 ## Pull Request
-- Adicone um template para suas PR:
-1. crie uma pasta /.github
-2. cole o template no formato template.md
