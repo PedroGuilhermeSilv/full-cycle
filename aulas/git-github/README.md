@@ -62,3 +62,5 @@ caso queira usar assinatura em todos os repositórios use --global.
 1. Vá no settings do seu repositório e mude a Default Branch para "develop".
 
 2. Adicione regras de commits.
+
+## Pull Request
