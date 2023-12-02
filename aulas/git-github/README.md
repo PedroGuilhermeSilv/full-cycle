@@ -27,7 +27,7 @@
     - hotfix/{nome-da-correcao}: Criados a partir de master para corrigir problemas críticos em produção. Assim que a correção é feita, é mesclada em master e develop, e uma tag é criada.
 
 ## Repositório Git-Flow
-Foi criado um repositório para implementar a metodoogia git-flow [Gii-flow](https://github.com/PedroGuilhermeSilv/git-flow).
+Foi criado um repositório para implementar a metodoogia git-flow [Git-flow](https://github.com/PedroGuilhermeSilv/git-flow).
 
 
 ## Trabalhando com assinatura de commits
@@ -73,7 +73,7 @@ caso queira usar assinatura em todos os repositórios use --global.
 
 ## Code Review
 
-## Versionamento Semântico
+## [Versionamento Semântico](https://semver.org/lang/pt-BR/) 
 - Dado um número de versão MAJOR.MINOR.PATCH, incremente a:
 - Ex: Versão 1.2.3
 1. versão Maior(MAJOR): quando fizer mudanças incompatíveis na API,
