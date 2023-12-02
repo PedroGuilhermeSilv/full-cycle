@@ -76,6 +76,6 @@ caso queira usar assinatura em todos os repositórios use --global.
 ## Versionamento Semântico
 - Dado um número de versão MAJOR.MINOR.PATCH, incremente a:
 - Ex: Versão 1.2.3
-    1. versão Maior(MAJOR): quando fizer mudanças incompatíveis na API,
-    2. versão Menor(MINOR): quando adicionar funcionalidades mantendo compatibilidade, e
-    3. versão de Correção(PATCH): quando corrigir falhas mantendo compatibilidade.
+1. versão Maior(MAJOR): quando fizer mudanças incompatíveis na API,
+2. versão Menor(MINOR): quando adicionar funcionalidades mantendo compatibilidade, e
+3. versão de Correção(PATCH): quando corrigir falhas mantendo compatibilidade."
