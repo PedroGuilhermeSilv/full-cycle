@@ -74,7 +74,7 @@ caso queira usar assinatura em todos os repositórios use --global.
 ## Code Review
 
 ## [Versionamento Semântico]
-### [Convenntional Version]((https://semver.org/lang/pt-BR/))
+### [Convenntional Version](https://semver.org/lang/pt-BR/)
 - Dado um número de versão MAJOR.MINOR.PATCH, incremente a:
 - Ex: Versão 1.2.3
 1. versão Maior(MAJOR): quando fizer mudanças incompatíveis na API,
