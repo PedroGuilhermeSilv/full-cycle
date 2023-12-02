@@ -74,7 +74,7 @@ caso queira usar assinatura em todos os repositórios use --global.
 ## Code Review
 
 ## Versionamento Semântico
-### [Convenntional Version](https://semver.org/lang/pt-BR/)
+### [Conventional Version](https://semver.org/lang/pt-BR/)
 - Dado um número de versão MAJOR.MINOR.PATCH, incremente a:
 - Ex: Versão 1.2.3
 1. versão Maior(MAJOR): quando fizer mudanças incompatíveis na API,
@@ -82,6 +82,7 @@ caso queira usar assinatura em todos os repositórios use --global.
 3. versão de Correção(PATCH): quando corrigir falhas mantendo compatibilidade."
 
 ### [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)
+- O commit contém os seguintes elementos estruturais, para comunicar a intenção ao utilizador da sua biblioteca:
 ```
 <type>[optional scope]: <description>
 
@@ -89,7 +90,6 @@ caso queira usar assinatura em todos os repositórios use --global.
 
 [optional footer(s)] 
 ```
-- O commit contém os seguintes elementos estruturais, para comunicar a intenção ao utilizador da sua biblioteca:
 
 1. fix: um commit do tipo fix soluciona um problema na sua base de código (isso se correlaciona com PATCH do versionamento semântico).
 2. feat: um commit do tipo feat inclui um novo recurso na sua base de código (isso se correlaciona com MINOR do versionamento semântico).
