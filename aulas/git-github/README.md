@@ -73,7 +73,7 @@ caso queira usar assinatura em todos os repositórios use --global.
 
 ## Code Review
 
-## [Versionamento Semântico]
+## Versionamento Semântico
 ### [Convenntional Version](https://semver.org/lang/pt-BR/)
 - Dado um número de versão MAJOR.MINOR.PATCH, incremente a:
 - Ex: Versão 1.2.3
