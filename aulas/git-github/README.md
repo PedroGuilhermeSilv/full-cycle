@@ -95,3 +95,7 @@ caso queira usar assinatura em todos os repositórios use --global.
 2. feat: um commit do tipo feat inclui um novo recurso na sua base de código (isso se correlaciona com MINOR do versionamento semântico).
 3. BREAKING CHANGE: um commit que contém no rodapé opcional o texto BREAKING CHANGE:, ou contém o símbolo ! depois do tipo/escopo, introduz uma modificação que quebra a compatibilidade da API (isso se correlaciona com MAJOR do versionamento semântico). Uma BREAKING CHANGE pode fazer parte de commits de qualquer tipo.
 4. Outros tipos adicionais são permitidos além de fix: e feat:, por exemplo @commitlint/config-conventional (baseado na Convenção do Angular) recomenda-se build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, entre outros.
+
+- Ferramentas:
+1. Extensão "Conventional commits" no Visual Studio Code.
+2. Commmitlint: irá revisar todo commit realizado para verificar se está dentro dos padrões.
