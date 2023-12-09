@@ -99,3 +99,4 @@ caso queira usar assinatura em todos os repositórios use --global.
 - Ferramentas:
 1. Extensão "Conventional commits" no Visual Studio Code.
 2. Commmitlint: irá revisar todo commit realizado para verificar se está dentro dos padrões.
+3. Commitzen: facilitar a prodinização dos commits via terminal. 
