@@ -14,4 +14,4 @@
 - Geração de tags e releases
 
 ## Github Actions 
-![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/ci/img/githubactions.png)
+![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/develop/aulas/ci/img/githubactions.png)
