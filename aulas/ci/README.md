@@ -21,4 +21,9 @@
 - A [documentação](https://docs.github.com/pt/actions) do github possui vários exemplos de uso. 
 
 ## Status check
-Você pode incluir uma lista de testes para eventos específicos em seu repositório Git, como, por exemplo, exigir a execução de testes antes de mesclar um pull request ou quando realizar um push..
+- Você pode incluir uma lista de testes para eventos específicos em seu repositório Git. 
+1. Adicione no arquivo.yaml
+2. No repositório do github vá em settings->branchs.
+3. Adicione a opção "Requiire status check"
+
+- Podemos também trabalhar com multi versões usando [Strategy Matrix](https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs), dessa forma podemos rodar os testes em diferentes versões como: go 1.14, go 1.15 e etc...
