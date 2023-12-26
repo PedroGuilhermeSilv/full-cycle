@@ -16,7 +16,9 @@
 ## Github Actions 
 ![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/develop/aulas/ci/img/githubactions.png)
 
-- Crie uma pasta chamada de .github/main/arquivo.yaml. Dentro do arquivo.yaml estará as instruções dos testes que deeseja realizar, na [documentação](https://docs.github.com/pt/actions) do github temos vários exemplos de uso. 
+1. Crie uma pasta chamada de .github/main/arquivo.yaml. 
+2. Dentro do arquivo.yaml estará as instruções dos testes que deeseja realizar.
+- A [documentação](https://docs.github.com/pt/actions) do github possui vários exemplos de uso. 
 
 ## Status check
 Você pode incluir uma lista de testes para eventos específicos em seu repositório Git, como, por exemplo, exigir a execução de testes antes de mesclar um pull request ou quando realizar um push..
