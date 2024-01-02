@@ -24,6 +24,13 @@
 - Você pode incluir uma lista de testes para eventos específicos em seu repositório Git. 
 1. Adicione no arquivo.yaml
 2. No repositório do github vá em settings->branchs.
-3. Adicione a opção "Requiire status check"
+3. Adicione a opção "Require status check"
 
 - Podemos também trabalhar com multi versões usando [Strategy Matrix](https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs), dessa forma podemos rodar os testes em diferentes versões como: go 1.14, go 1.15 e etc...
+
+## Buildando uma imagem docker
+
+- É possível também subir uma imagem docker para realizar os testes de nosso dockerfile. [Saiba Mais](https://github.com/marketplace/actions/build-and-push-docker-images)
+
+## Sonarqube
+- É umma ferramenta open source que faz a análise de código para varificar a qualidade e integridade.
