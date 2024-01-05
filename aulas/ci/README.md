@@ -34,3 +34,6 @@
 
 ## Sonarqube
 - É umma ferramenta open source que faz a análise de código para varificar a qualidade e integridade.
+- Rules: serão as regras de determinada linguagens de progrmação.
+- Quality Profiles: serão perfis que contém as regras para serem atribuidos a determinado projeto.
+- Quality Gates: verifica se o projeto está passando ou não.
