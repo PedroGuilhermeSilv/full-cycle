@@ -7,9 +7,9 @@ Conteúdos a serem abordados no curso
 
 - [x] 03 Padrões e técnicas avançadas com Git e Github 
 
-- [ ... ] 04 Integração contínua 
+- [x] 04 Integração contínua 
 
-- [ ] 05 Kubernetes 
+- [...] 05 Kubernetes 
 
 - [ ] 06 Service Mesh com Istio 
 
