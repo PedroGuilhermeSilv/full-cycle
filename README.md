@@ -9,7 +9,7 @@ Conteúdos a serem abordados no curso
 
 - [x] 04 Integração contínua 
 
-- [...] 05 Kubernetes 
+- [] 05 Kubernetes 
 
 - [ ] 06 Service Mesh com Istio 
 
@@ -31,7 +31,7 @@ Conteúdos a serem abordados no curso
 
 - [ ] 15 Comunicação entre sistemas 
 
-- [ ] 16 SOLID Express 
+- [x] 16 SOLID Express 
 
 - [ ] 17 Domain Driven Design 
 
