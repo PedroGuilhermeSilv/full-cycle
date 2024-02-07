@@ -12,3 +12,27 @@
 - Core Domain
 - Support Domain
 - Generic subdomain (software auxiliares)
+
+## Problema vs Solução
+- Problema: Visão geral do domínio e suas complexidades (subdomíno->contexto)
+- Solução: Análise e modelagem do domínio. 
+
+## Bounded Contexts
+- Delimitação de um contexto onde todos possam usar uma linguagem universal.
+- Quando se começa a utilizar diferentes linguagens em um contexto é um indicio que devemos separar em diferentes áreas de aplicação.
+
+## Elementos Transversais 
+- Imagine que uma entidade `cliente` é a mesma para diferente contextos e ne outro cenário o `ticket` tem o mesmo nome mas tem signficado diferente entre dois contextos. Ambas situações devemos tratar as entidade de maneira independente entre si, isso ajudará com que um contexto não dependa de outro e crie um monstro.
+
+## Context Mapping
+
+![Context Mapping](https://assets.digitalocean.com/articles/alligator/boo.svg )
+
+- Shared: compartilhamento entre contextos.
+- Upstream: fornecedor de dados.
+- Downstream: recepitor dos dados.
+- ACL(anti corruption layer): faz o intermédio entre o contexto e um programa externo para minimizar a dependência. 
+
+
+## Documentation
+https://github.com/ddd-crew/context-mapping
