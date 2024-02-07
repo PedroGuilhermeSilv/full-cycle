@@ -33,9 +33,9 @@ Conteúdos a serem abordados no curso
 
 - [x] 16 SOLID Express 
 
-- [...] 17 Domain Driven Design 
+- [x] 17 Domain Driven Design 
 
-- [ ] 18 DDD Modelagem Tática e Patterns 
+- [...] 18 DDD Modelagem Tática e Patterns 
 
 - [ ] 19 Event Storming na Prática 
 
