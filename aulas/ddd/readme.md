@@ -26,7 +26,7 @@
 
 ## Context Mapping
 
-![Context Mapping](https://assets.digitalocean.com/articles/alligator/boo.svg )
+![Context Mapping](https://github.com/PedroGuilhermeSilv/full-cycle/blob/develop/aulas/ddd/img/context_mapping.png )
 
 - Shared: compartilhamento entre contextos.
 - Upstream: fornecedor de dados.
