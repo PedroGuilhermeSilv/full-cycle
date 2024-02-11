@@ -33,6 +33,10 @@
 - Downstream: recepitor dos dados.
 - ACL(anti corruption layer): faz o intermédio entre o contexto e um programa externo para minimizar a dependência. 
 
-
-## Documentation
+### Documentation
 https://github.com/ddd-crew/context-mapping
+
+## Entite
+- Uma entidade deve ser única e de fácil distinção independente de seus atributos.
+- Regras de negócio: A entidade deve incorporar as regras de negócio da aplicação. Não é suficiente apenas ter getters e setters; isso resultaria em uma entidade anêmica. Devemos, por exemplo, utilizar métodos como "changeName" em vez de simplesmente "setName".
+- Consistência: Uma entidade sempre deve ter o mínimo para cumprir uma regra de negócio, por exemplo, um custumer sem nome é algo que provavelmente deve infrigir a regra de negócio da aplicação. 
