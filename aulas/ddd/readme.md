@@ -51,8 +51,8 @@ https://github.com/ddd-crew/context-mapping
 - A entidade é a regra de negócio da empresa o ORM é a tabela no banco de dados.
 - São dois pilares diferentes da aplicação.
 Ex:
-Entity
-    custumer.ts(regra de negócio)
-Infra
-    Model
-        custumer.ts(get,,set)
+- Entity
+    - custumer.ts(regra de negócio)
+- Infra
+    - Model
+        - custumer.ts(get,set)
