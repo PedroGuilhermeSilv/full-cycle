@@ -36,7 +36,23 @@
 ### Documentation
 https://github.com/ddd-crew/context-mapping
 
-## Entite
+## Entite:
 - Uma entidade deve ser única e de fácil distinção independente de seus atributos.
-- Regras de negócio: A entidade deve incorporar as regras de negócio da aplicação. Não é suficiente apenas ter getters e setters; isso resultaria em uma entidade anêmica. Devemos, por exemplo, utilizar métodos como "changeName" em vez de simplesmente "setName".
+- A entidaded sempre deve representar o estado atual e correto.
 - Consistência: Uma entidade sempre deve ter o mínimo para cumprir uma regra de negócio, por exemplo, um custumer sem nome é algo que provavelmente deve infrigir a regra de negócio da aplicação. 
+
+## Regra de Negócio:
+- Regras de negócio: A entidade deve incorporar as regras de negócio da aplicação. Não é suficiente apenas ter getters e setters; isso resultaria em uma entidade anêmica. Devemos, por exemplo, utilizar métodos como "changeName" em vez de simplesmente "setName". Toda atividade que envolva mexer com nossa entitade pode se tornar uma regra de negócio.
+
+## Principio da autovalidação:
+- Uma entidade deve se autovalidar, ou seja, não deve depender de serviços externos para garantir a integridade dos seus dados.
+
+## Entidade vs ORM
+- A entidade é a regra de negócio da empresa o ORM é a tabela no banco de dados.
+- São dois pilares diferentes da aplicação.
+Ex:
+Entity
+    custumer.ts(regra de negócio)
+Infra
+    Model
+        custumer.ts(get,,set)
