@@ -56,3 +56,9 @@ Ex:
 - Infra
     - Model
         - custumer.ts(get,set)
+
+## Value Objects
+- Trata como um dado imutável
+- Autovalidação
+- Expressividade
+- Não é único (não tem id)
