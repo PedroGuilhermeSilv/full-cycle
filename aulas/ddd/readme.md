@@ -65,3 +65,14 @@ Ex:
 
 ## Aggregate
 - Conjunto de dados associados que tratamos como uma unidade para propósito de mudança de dados.
+- Quando temos que juntar dados que são de agregados diferentes vemos que eles são referenciados pode id. Ex: Order(custumer_id,item[])
+
+## Domain Services
+- Os Domain Services encapsulam regras de negócios complexas ou operações que não se encaixam bem em nenhum objeto do domínio específico. Eles promovem a coesão ao agrupar operações relacionadas, evitando a dispersão de lógica de negócios em vários objetos de domínio.
+- Uma entidade pode realizar uma ação que vai afetar todas as entidades?
+- Como calcular algo que cuja as informações constam em mais de uma entidade?
+- Quando houver muitos Domain Services em seu projeto, TALVEZ, isso pode indicar que seus agregados estão anêmicos.
+- Domain Services são Stateless.
+
+## Repositories
+- Repositórios são responsáveis por fornecer uma interface para acessar e persistir objetos de domínio. Eles abstraem o armazenamento e recuperam objetos de domínio, permitindo que a lógica de negócios seja desacoplada de detalhes de armazenamento e acesso a dados.
