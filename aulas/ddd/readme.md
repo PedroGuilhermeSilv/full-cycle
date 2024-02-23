@@ -58,11 +58,15 @@ Ex:
         - custumer.ts(get,set)
 
 ## Value Objects
-- Trata como um dado imutável
-- Autovalidação
-- Expressividade
-- não tem id
+- Imutabilidade: Os objetos de valor são geralmente imutáveis, o que significa que uma vez criados, seus estados não podem ser alterados. Isso ajuda a garantir a consistência e a previsibilidade em um sistema.
 
+- Sem identidade própria: Ao contrário das entidades, os objetos de valor não têm uma identidade única. Eles são identificados pelo conjunto de valores de seus atributos. Dois objetos de valor com os mesmos atributos são considerados iguais.
+
+- Composição: Eles muitas vezes são usados para representar conceitos que são naturalmente compostos de outros valores menores. Por exemplo, um endereço pode ser um objeto de valor composto por rua, cidade, estado e código postal.
+
+- Sem vida própria: Geralmente, os objetos de valor dependem de uma entidade ou agregação maior para existir. Eles não têm vida própria e são utilizados para descrever aspectos específicos de uma entidade ou agregação.
+
+- Comparação por valor: A igualdade de objetos de valor é determinada pelo valor de seus atributos, não por uma referência de memória. Dois objetos de valor com os mesmos valores em todos os atributos são considerados iguais, mesmo que sejam instâncias separadas.
 ## Aggregate
 - Conjunto de dados associados que tratamos como uma unidade para propósito de mudança de dados.
 - Quando temos que juntar dados que são de agregados diferentes vemos que eles são referenciados pode id. Ex: Order(custumer_id,item[])
