@@ -61,4 +61,7 @@ Ex:
 - Trata como um dado imutável
 - Autovalidação
 - Expressividade
-- Não é único (não tem id)
+- não tem id
+
+## Aggregate
+- Conjunto de dados associados que tratamos como uma unidade para propósito de mudança de dados.
