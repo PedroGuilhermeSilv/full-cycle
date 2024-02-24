@@ -80,3 +80,9 @@ Ex:
 
 ## Repositories
 - Repositórios são responsáveis por fornecer uma interface para acessar e persistir objetos de domínio. Eles abstraem o armazenamento e recuperam objetos de domínio, permitindo que a lógica de negócios seja desacoplada de detalhes de armazenamento e acesso a dados.
+
+## Domain Events
+- Usamos eventos para informar para outros bounded context mudanças que ocorreram.
+- Event: evento.
+- Handler: Executa o processamento quando um evento é chamado.
+- Event Dispatcher: Responsável por armazenar e executar os handlers de um evento quando ele for disparado.
