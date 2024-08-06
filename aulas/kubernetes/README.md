@@ -11,4 +11,4 @@ utilizar réplicas de pods como segurança mas o kubernete não te permite exced
 
 [Deployment](../kubernetes/img/image.png)
 
-#F0079
+#F0081
