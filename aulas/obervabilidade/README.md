@@ -8,3 +8,12 @@
 - Monitoriamento mostra que há algo de errado.
 - Monitoramento se baseia em sabe com antecedência quais sinais você deseja monitorar
 - Observabilidade nos permite perguntar o porquê
+
+## 3 Pilares
+
+- Métricas
+- Logs
+- Tracing
+
+
+F0188

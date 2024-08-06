@@ -9,17 +9,17 @@ Conteúdos a serem abordados no curso
 
 - [x] 04 Integração contínua 
 
-- [ ] 05 Kubernetes 
+- [...] 05 Kubernetes 
 
 - [ ] 06 Service Mesh com Istio 
 
 - [ ] 07 API Gateway com Kong e Kubernetes 
 
-- [ ] 08 Observabilidade 
+- [] 08 Observabilidade 
 
 - [ ] 09 Introdução a OpenTelemetry 
 
-- [ ] 10 Terraform 
+- [] 10 Terraform 
 
 - [ ] 11 Ansible 
 
@@ -35,7 +35,7 @@ Conteúdos a serem abordados no curso
 
 - [x] 17 Domain Driven Design 
 
-- [...] 18 DDD Modelagem Tática e Patterns 
+- [ ] 18 DDD Modelagem Tática e Patterns 
 
 - [ ] 19 Event Storming na Prática 
 
