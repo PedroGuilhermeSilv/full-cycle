@@ -43,10 +43,70 @@ kubectl rollout history deployment <nome-do-pod>
 
 ## Services
 Através do services que temos acessos as nossas aplicações. Servindo como um intemediardor e até como balanceador, podemos filtrar um conjunto de pods que o service podee gerenciar então para ter acesso a determinada aplicação tudo passara por ele.
+Temos três tipode service: ClusterIP , NodePort , LoadBalancer
+
+ClusterIP: podemos fazer similar ao proxy reverso quando passamos a port estamos passando a porta que vamo acessar o service já o targetPort poassamos
+a porta que o conatiner esta rodando então bateremos na porta service:80 que vai apontar para container:800. Lembrando que ele cria um ip interno.
+
+```yaml 
+apiVersion: v1
+kind: Service
+metadata:
+  name: goserver-service
+spec:
+  selector:
+    app: goservers
+  ports:
+    - name: goserver-service
+      port: 80
+      targetPort: 8000
+      protocol: TCP
+  type: ClusterIP
+```
+O `selector` vai ajudar a fazer o filtro dos pods
 
 
+NodePort: quando precisamos acessar o cluster de fora de sua rede utilizamos o NodePort. Então, o que vai acontecer é que em todos os nodes a porta
+3001 será aberta, caso você acesse por essa porta irá para o service goserver-service:80 que te jogara para o container:8000
+```yaml 
+apiVersion: v1
+kind: Service
+metadata:
+  name: goserver-service
+spec:
+  selector:
+    app: goservers
+  ports:
+    - name: goserver-service
+      port: 80
+      targetPort: 8000
+      protocol: TCP
+  type: NodePort
+```
+
+LoadBalancer: criar um ip externo usando o nodeport e é comumente usado quando se está em um cloud provider, então se cria esse external-ip que através dele você tem acesso ao service, podendo ser usado no dns
+```yaml 
+apiVersion: v1
+kind: Service
+metadata:
+  name: goserver-service
+spec:
+  selector:
+    app: goservers
+  ports:
+    - name: goserver-service
+      port: 80
+      targetPort: 8000
+      protocol: TCP
+  type: LoadBalancer
+```
 
 ## Comandos
+
+conectar seu pc no container do kubernetes para ter acesso a api
+```cmd
+kubectl proxy --port=8080
+```
 
 ```cmd
 kubectl config get-clusters
@@ -57,4 +117,4 @@ kubectl config use-clusters nome_do_cluster
 ```
 
 
-#F0088
+#F0095
