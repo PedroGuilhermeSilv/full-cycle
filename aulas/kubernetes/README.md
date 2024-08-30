@@ -97,10 +97,13 @@ spec:
     - name: goserver-service
       port: 80
       targetPort: 8000
-      protocol: TCP
+      protocol: TCP 
   type: LoadBalancer
 ```
 
+## ConfigMap e Secrets
+- Podemos passar envs para os containers criando um ConfigMap onde adicionamos os valores que podem ser importandos tanto para envs quando injetando no volume do container
+- Para dados mais sensíveis usamos o secret, porém ele só bota em base64
 ## Comandos
 
 conectar seu pc no container do kubernetes para ter acesso a api
@@ -117,4 +120,4 @@ kubectl config use-clusters nome_do_cluster
 ```
 
 
-#F0095
+#F0099
