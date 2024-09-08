@@ -16,7 +16,21 @@ spec:
     spec:
       containers:
         - name: goservers
-          image: "wesleywillians/hello-go:v5.2"
+          image: "wesleywillians/hello-go:v5.4"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            periodSeconds: 2
+            failureThreshold: 1
+          # livenessProbe:
+          #   httpGet:
+          #     path: /healthz
+          #     port: 8000
+          #   periodSeconds: 2
+          #   failureThreshold: 3
+          #   timeoutSeconds: 10
+          #   successThreshold: 1
           envFrom:
             - configMapRef:
                 name: env-config

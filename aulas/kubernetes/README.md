@@ -7,13 +7,13 @@
 
 ## Pontos importantes
 
-[Pontos Importantes](../kubernetes/img/pontos.png)
+![Pontos Importantes](./img/pontos.png)
 
 ### Deployment
 O k8 tem acesso ao recurso de cpu e máquina dos clusters e com isso ele pode gerenciar seus recursos então por exemplo, podemos 
 utilizar réplicas de pods como segurança mas o kubernete não te permite exceder seu hardware.
 
-[Deployment](../kubernetes/img/image.png)
+![Deployment](./img/image.png)
 
 
 ## Replicaset
@@ -42,7 +42,7 @@ kubectl rollout history deployment <nome-do-pod>
 ```
 
 ## Services
-Através do services que temos acessos as nossas aplicações. Servindo como um intemediardor e até como balanceador, podemos filtrar um conjunto de pods que o service podee gerenciar então para ter acesso a determinada aplicação tudo passara por ele.
+Através do services que temos acessos as nossas aplicações. Servindo como um intemediardor e até como balanceador, podemos filtrar um conjunto de pods que o service pode gerenciar então para ter acesso a determinada aplicação tudo passara por ele.
 Temos três tipode service: ClusterIP , NodePort , LoadBalancer
 
 ClusterIP: podemos fazer similar ao proxy reverso quando passamos a port estamos passando a porta que vamo acessar o service já o targetPort poassamos
@@ -104,8 +104,38 @@ spec:
 ## ConfigMap e Secrets
 - Podemos passar envs para os containers criando um ConfigMap onde adicionamos os valores que podem ser importandos tanto para envs quando injetando no volume do container
 - Para dados mais sensíveis usamos o secret, porém ele só bota em base64
-## Comandos
 
+## Health
+- Ultizamos o health para verificar os estados da nossa aplicação se ela está apita ser usada ou ainda está carregando ou até mesmo sem funcionar.
+
+### Liveness
+- O `LivenessProbe` pode agir de três formas como CLI executando comandos, Http fazendo requisições e TCP tentando fazer uma conexão e se caso der errado ele reinicia o container.
+- `periodSeconds` a cada quantos segundos ele vai fazer a requisição.
+- `failureThreshold` quantas vezes precisar da errado para ele falar que a aplicação caiu.
+- `timeoutSeconds` quanto tempo deve demorar a respota da requisição.
+- `sucessThreshold` quantas vezes esse processo tem que dar certo.
+- `initalDelaySeconds` tempo de espera para começar a executar as verificações.
+
+### Readiness
+- O `ReadinessProbe` verifica se a aplicação está ready, então ele pode utilizar dos mesmos recursos que o `LivenessProb` para fazer essa verificação. No caso ele muda o tráfego caso não esteja ready enquanto o liveness restart o container.
+
+### StartupProbe
+- Para não conflitar a inicialização do container com `rediness` e `liveness` foi criado o startup que vai avisar quando ambos podemos começar a agir após ele mesmo verificar se a aplicação está ok.
+
+
+
+```yaml
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: 8000
+  periodSeconds: 2
+  failureThreshold: 1
+  timeoutSeconds: 10
+  sucessThreshold: 1
+```
+
+## Comandos
 conectar seu pc no container do kubernetes para ter acesso a api
 ```cmd
 kubectl proxy --port=8080
@@ -120,4 +150,4 @@ kubectl config use-clusters nome_do_cluster
 ```
 
 
-#F0099
+#F0099 
