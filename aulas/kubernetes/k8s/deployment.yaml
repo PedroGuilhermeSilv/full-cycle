@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: goservers
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,13 +16,27 @@ spec:
     spec:
       containers:
         - name: goservers
-          image: "wesleywillians/hello-go:v5.4"
-          readinessProbe:
+          image: "wesleywillians/hello-go:v5.5"
+          resources:
+            requests:
+              memory: 64Mi
+              cpu: "0.05"
+            limits:
+              memory: 128Mi
+              cpu: "0.1"
+          startupProbe:
             httpGet:
               path: /healthz
               port: 8000
-            periodSeconds: 2
-            failureThreshold: 1
+            periodSeconds: 3
+            failureThreshold: 30
+            
+          # readinessProbe:
+          #   httpGet:
+          #     path: /healthz
+          #     port: 8000
+          #   periodSeconds: 2
+          #   failureThreshold: 1
           # livenessProbe:
           #   httpGet:
           #     path: /healthz

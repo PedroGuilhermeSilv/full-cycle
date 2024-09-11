@@ -134,6 +134,29 @@ livenessProbe:
   timeoutSeconds: 10
   sucessThreshold: 1
 ```
+## Resources
+- Agora falando sobre recursos físicos, o k8 tem que gerenciar o quanto ele pode gastar e qual mínimo ele tem que reservar para
+seu node funcionar e por isso tempos os campos `request` que passamos o mínimo de cpu e memory e `limits` vai ter o máximo de uso.
+
+
+## HPA
+- Para configurar o k8 de como ele deve gerenciar a criação de pods com base no uso utilizamos o `hpa`
+
+```yaml
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: goserver-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: go-server
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 30
+
+```
 
 ## Comandos
 conectar seu pc no container do kubernetes para ter acesso a api
@@ -150,4 +173,4 @@ kubectl config use-clusters nome_do_cluster
 ```
 
 
-#F0099 
+#F0112
