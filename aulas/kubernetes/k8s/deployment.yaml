@@ -30,53 +30,25 @@ spec:
               port: 8000
             periodSeconds: 3
             failureThreshold: 30
-            
-          # readinessProbe:
-          #   httpGet:
-          #     path: /healthz
-          #     port: 8000
-          #   periodSeconds: 2
-          #   failureThreshold: 1
-          # livenessProbe:
-          #   httpGet:
-          #     path: /healthz
-          #     port: 8000
-          #   periodSeconds: 2
-          #   failureThreshold: 3
-          #   timeoutSeconds: 10
-          #   successThreshold: 1
           envFrom:
             - configMapRef:
                 name: env-config
             - secretRef:
                 name: mysecret
           volumeMounts:
+            - mountPath: "/go/pvc"
+              name: goserver-volume  # Corrigido aqui
+
             - mountPath: "/go/myfamily"
               name: config
               readOnly: true
       volumes:
+        - name: goserver-volume  # Certifique-se de que o nome corresponde
+          persistentVolumeClaim:
+            claimName: goserver-pvc
         - name: config
           configMap:
             name: env-config-family
             items:
               - key: members
                 path: "family.txt"
-
-
-          # env:
-          #   - name: NAME
-          #     valueFrom:
-          #       configMapKeyRef:
-          #         name: env-config
-          #         key: NAME
-          #   - name: AGE
-          #     valueFrom:
-          #       configMapKeyRef:
-          #         name: env-config
-          #         key: AGE
-
-
-            # - name: NAME
-            #   value: "Wesley"
-            # - name: AGE
-            #   value: "25"

@@ -158,6 +158,31 @@ spec:
 
 ```
 
+## Volume
+- Como o docker o k8 e imutável, porém tem ocasições que queremos que os dados fiquem salvos. Temos o `Claim` salva um tamanho estático no disco e o `StorageClass` aloca de maneira dinamica com forme você precisar. Além disso, temos os acessModes: ReadWriteOne-> somente pods do mesmo node podem acessar, ReadWriteMany-> pods de diferentes nodes podem acessar porém requer muita configuração de lock de arquivos.
+- `Claim`: para usar o claim primeiro teremos que criar um PersistentVolume que vai separa um espaço persistente de armazenamento e depois criar um claim que vai solicitar um pedaço desse armazenamento.
+
+## Stateless & Stateful
+Stateless: Nenhum estado é mantido entre interações (cada interação é independente).
+Stateful: O estado é mantido e utilizado entre interações para fornecer uma experiência mais contínua.
+
+O deployment cria desordenamente todas os pods de uma vez já usando o statefulset ele segue a ordem de pilha onde para criação ele cria do 0 ao numero total e para remover ele remove do último ao primeiro.
+
+## headless service
+- Sem IP de Cluster: Ao contrário de um serviço normal, um headless service não tem um endereço IP próprio no cluster. Em vez de rotear o tráfego para um IP de serviço que balanceia a carga entre os pods, ele retorna os IPs dos pods diretamente.
+
+- DNS resolve diretamente os pods: O DNS resolve diretamente para os pods associados ao serviço. Em vez de retornar o IP do serviço, ele retorna uma lista dos IPs dos pods que estão associados a esse serviço. Isso permite que os clientes se conectem diretamente a um pod específico.
+
+- Controle direto: Ele permite que as aplicações façam suas próprias decisões de roteamento, balanceamento de carga ou descoberta de serviços, sem depender do serviço de balanceamento de carga do Kubernetes.
+
+- Uso comum: Um headless service é frequentemente usado em casos em que o balanceamento de carga entre os pods não é necessário ou não faz sentido, como em bancos de dados distribuídos, como Cassandra, ou em aplicativos que precisam de descoberta direta dos pods individuais.
+
+Quando usar um headless service:
+
+- Bancos de dados distribuídos: Para aplicativos como Cassandra ou MongoDB, onde cada nó do banco de dados precisa ser acessado diretamente, um headless service pode expor cada instância/nó individual.
+- Streaming ou replicação de dados: Em sistemas que dependem de replicação de dados ou fluxo contínuo de informações, o acesso direto aos pods pode ser essencial.
+- Aplicações que precisam de descoberta de serviço customizada: Se a aplicação tem seu próprio mecanismo de descoberta de serviços e balanceamento, não há necessidade de usar o balanceamento de carga do Kubernetes.
+
 ## Comandos
 conectar seu pc no container do kubernetes para ter acesso a api
 ```cmd
@@ -173,4 +198,4 @@ kubectl config use-clusters nome_do_cluster
 ```
 
 
-#F0112
+#F0116
