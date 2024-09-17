@@ -196,6 +196,16 @@ kubectl config get-clusters
 ```cmd
 kubectl config use-clusters nome_do_cluster
 ```
+## NGNIXX Ingress Controller
+podemosa usar somente um host para acessar todas as outras apliacações
 
+## cert-manager 
+Configura nosso TLS para certificar nosso host.
 
-#F0116
+## Spacename e context
+Ajudam a separar e organizar nossos pods
+
+## Service Account e Role
+Quando você sobe vários pods você gera uma fragilidade de sistema pois todos usam o service account default que tem permissão de leitura e escrita a todos os outros services. Caso você seja rackeado todos os outros pods ficaram vulneráveis e por isso deve-ser criar seu service account com sua role. Temos tambémm o CLusterRole que pode gerar as mesmas roles a nível de Cluster.
+
+#F0118
