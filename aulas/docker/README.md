@@ -1,7 +1,7 @@
 # Full Cycle
 
 # Docker
-![](https://github.com/PedroGuilhermeSilv/full-cycle/blob/main/aulas/docker/img/docker-funciona.png)
+![](./img/docker-funciona.png)
 
 1 - Containers:
 - Containers são na verdade processos isolados que simulam um sistema operacional.
@@ -35,12 +35,20 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
 - none: serve para rodar o container de forma isolada.
 - host.docker.internal:8000 consegue acessar a porta local peelo container.
 
-6 - DockerHub
+5 - Healthcheck
+- É possível adicionar um verificador de status da sua imagem para saber se ela está rodando ou não.
+
+6- Economizar espaço (processo  multistage)
+- Para imagens compiladas como o go podemos adicionar outra imagem chamada de scrath que é totalmente vazia e adicionamos apenas o arquivo de execução e o command para rodar.
+
+7 - DockerHub
 - É possível criar uma imagem e subi-lá no DockerHub para se tornar uma imagem pública.
     - docker login
     - docker push nome_imagem
+- Consulta de imagens
+    - docker search nome-da-imagem
 
-6 - Docker-compose
+8 - Docker-compose
 - É um conjunto de instruções que são executadas automaticamente para criação dos containers. Você pode passar:
     image:
         Especifica a imagem Docker para o serviço.
@@ -78,8 +86,46 @@ ENTRYPOINT: Comandos sh (Obs: é um comando fixo sempre será executado e será 
     entrypoint:
         Sobrescreve o ponto de entrada padrão.
 
-8 - Comandos:.
+9 - Entrypoint  e Cmd
+### Entrypoint
+Define o comando que sempre será executado quando o container iniciar. Não pode ser sobrescrito ao executar `docker run`, a menos que a opção `--entrypoint` seja usada.
+Exemplo no Dockerfile:
+```dockerfile
+ENTRYPOINT ["executable", "param1", "param2"]
+```
+### CMD
+Define o comando padrão que será executado quando o container iniciar. Pode ser sobrescrito ao executar docker run com outros argumentos.
+
+Exemplo no Dockerfile:
+```dockerfile
+CMD ["param1", "param2"]
+```
+10 - Labels
+As labels são usadas para adicionar metadados aos containers, imagens, volumes ou redes. Elas ajudam a organizar, buscar e gerenciar recursos Docker.
+
+Exemplo no Dockerfile:
+```dockerfile
+LABEL maintainer="seu_nome@example.com"
+LABEL version="1.0"
+LABEL description="Descrição da sua aplicação"
+LABEL env="production"
+```
+11 - ONBUILD
+A instrução `ONBUILD` adiciona um gatilho à imagem que será executado quando uma imagem derivada for construída. É útil para criar imagens base que outras imagens podem herdar.
+
+Exemplo no Dockerfile:
+```dockerfile
+ONBUILD ADD . /app/src
+ONBUILD RUN /usr/local/bin/python-build --dir /app/src
+```
+
+
+12 - Comandos:.
 Mostra os containers que estão rodando.
+```bash
+$ docker build -t nome_da_imagem .
+```
+Mostra os containers que estão rodando e os que já executaram mas foram abortados. 
 
 ```bash
 $ docker ps
@@ -144,6 +190,11 @@ $ docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash
 Remove todos os containers 
 ```bash
 $ docker rm $(docker ps -a -q) -f
+```
+
+Atachar terminal no container
+```bash
+$ docker attach imagem
 ```
 
 
