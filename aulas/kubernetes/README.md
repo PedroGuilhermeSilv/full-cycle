@@ -208,4 +208,4 @@ Ajudam a separar e organizar nossos pods
 ## Service Account e Role
 Quando você sobe vários pods você gera uma fragilidade de sistema pois todos usam o service account default que tem permissão de leitura e escrita a todos os outros services. Caso você seja rackeado todos os outros pods ficaram vulneráveis e por isso deve-ser criar seu service account com sua role. Temos tambémm o CLusterRole que pode gerar as mesmas roles a nível de Cluster.
 
-#F0118
+#F087

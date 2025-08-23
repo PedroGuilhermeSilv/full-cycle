@@ -15,11 +15,11 @@ Conteúdos a serem abordados no curso
 
 - [ ] 07 API Gateway com Kong e Kubernetes 
 
-- [] 08 Observabilidade 
+- [ ] 08 Observabilidade 
 
 - [ ] 09 Introdução a OpenTelemetry 
 
-- [] 10 Terraform 
+- [ ] 10 Terraform 
 
 - [ ] 11 Ansible 
 
@@ -47,7 +47,9 @@ Conteúdos a serem abordados no curso
 
 - [ ] 23 Arquitetura baseada em microsserviços 
 
-- [ ] 24 EDA - [ ] Event Driven Architecture 
+- [ ] 24 EDA 
+
+- [ ] Event Driven Architecture 
 
 - [ ] 25 API Gateway 
 
