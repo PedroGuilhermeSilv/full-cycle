@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: goservers
-  replicas: 1
+  replicas: 10
   template:
     metadata:
       labels:
@@ -16,39 +16,4 @@ spec:
     spec:
       containers:
         - name: goservers
-          image: "wesleywillians/hello-go:v5.5"
-          resources:
-            requests:
-              memory: 64Mi
-              cpu: "0.05"
-            limits:
-              memory: 128Mi
-              cpu: "0.1"
-          startupProbe:
-            httpGet:
-              path: /healthz
-              port: 8000
-            periodSeconds: 3
-            failureThreshold: 30
-          envFrom:
-            - configMapRef:
-                name: env-config
-            - secretRef:
-                name: mysecret
-          volumeMounts:
-            - mountPath: "/go/pvc"
-              name: goserver-volume  # Corrigido aqui
-
-            - mountPath: "/go/myfamily"
-              name: config
-              readOnly: true
-      volumes:
-        - name: goserver-volume  # Certifique-se de que o nome corresponde
-          persistentVolumeClaim:
-            claimName: goserver-pvc
-        - name: config
-          configMap:
-            name: env-config-family
-            items:
-              - key: members
-                path: "family.txt"
+          image: "guilhermesilv/hello-go:latest"
